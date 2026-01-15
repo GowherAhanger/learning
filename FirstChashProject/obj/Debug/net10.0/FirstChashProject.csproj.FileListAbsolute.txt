@@ -1,0 +1,14 @@
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/bin/Debug/net10.0/FirstChashProject
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/bin/Debug/net10.0/FirstChashProject.deps.json
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/bin/Debug/net10.0/FirstChashProject.runtimeconfig.json
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/bin/Debug/net10.0/FirstChashProject.dll
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/bin/Debug/net10.0/FirstChashProject.pdb
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/obj/Debug/net10.0/FirstChashProject.GeneratedMSBuildEditorConfig.editorconfig
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/obj/Debug/net10.0/FirstChashProject.AssemblyInfoInputs.cache
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/obj/Debug/net10.0/FirstChashProject.AssemblyInfo.cs
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/obj/Debug/net10.0/FirstChashProject.csproj.CoreCompileInputs.cache
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/obj/Debug/net10.0/FirstChashProject.dll
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/obj/Debug/net10.0/refint/FirstChashProject.dll
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/obj/Debug/net10.0/FirstChashProject.pdb
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/obj/Debug/net10.0/FirstChashProject.genruntimeconfig.cache
+/home/gowher/Desktop/FirstChashProject/FirstChashProject/obj/Debug/net10.0/ref/FirstChashProject.dll
