@@ -7,6 +7,6 @@ class Program
     {
         Console.WriteLine("Enter Value ");
         string value = Console.ReadLine();
-        Console.WriteLine("Entered Valdfghjfdghue: " + value);
+        Console.WriteLine("Entered  " + value);
     }
 }
