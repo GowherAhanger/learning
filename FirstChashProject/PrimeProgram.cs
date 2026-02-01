@@ -30,5 +30,5 @@ class PrimeProgram
             {
                 Console.Write($"this is Not a prime No:=> {num} \n");
             }
-        } 
+    } 
     }

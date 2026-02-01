@@ -21,19 +21,19 @@ public class AgeCalculator
         //  }
         Console.Write("Enter phone: ");
         string phoneNumber = Console.ReadLine();
-        bool perfect = true;
+        bool valid = true;
 
         if (phoneNumber.Length != 10 || phoneNumber[0] == '0')
-            perfect = false;
+            valid = false;
         else
             for (int i = 0; i < phoneNumber.Length; i++)
                 if (phoneNumber[i] < '0' || phoneNumber[i] > '9')
                 {
-                    perfect = false;
+                    valid = false;
                     break;
                 }
-
-        Console.WriteLine(perfect ? "Valid phone number" : "Invalid phone number");
+                //ternary Opreator in place of if else.......................
+        Console.WriteLine(valid ? "Valid phone number" : "Invalid phone number");
          //Determine age .........
          Console.Write("Enter your Date of Birth (dd/MM/yyyy): \n");
          string dobInput = Console.ReadLine();
@@ -46,6 +46,8 @@ public class AgeCalculator
          if (age <= 0 || age > 120)
          {
              Console.WriteLine("Invalid age");
+             
+             //insted of return we can use else Console.WriteLine($"Your age is {age}");
              return;
          }
         
