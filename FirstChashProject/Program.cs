@@ -43,10 +43,25 @@ class Program
         //ReverseString rs = new ReverseString();
         //Triverse_And_Print_2dArray tp = new Triverse_And_Print_2dArray();
         //MatrixMultipulcation mm = new MatrixMultipulcation();
-          Student std = new Student();
-          std.DisplayName("GowherAhanger");
-          std.DisplayMarks(72);
-              
+          // Student std = new Student();
+          // std.DisplayName("GowherAhanger");
+          // std.DisplayMarks(72);
+          // Hierarchical inheritance objs........  
+          //objs of Dog.......
+          // Dog dog = new Dog();
+          // dog.Eat(); // base class obj..........
+          // dog.Bark();// derived class obj.........
+          // Console.WriteLine();
+          //objs for cat.................
+          // Cat  cat = new Cat();
+          // cat.Eat();  // parent/animal class obj ...........
+          // cat.Meow(); // child/ cat  class obj................
+          //oerloading ..............
+          ExampleOverload eo = new ExampleOverload();
+          eo.add();
+          eo.add(1, 2);
+          eo.add(3, 4);
+          eo.add(1, 4, 6);
 
     }
     
