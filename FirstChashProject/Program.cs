@@ -68,10 +68,13 @@ class Program
           // Employee e = new Employee();
           // e.mySalery();
           // e.work();
-         Golden golden = new Golden();
-         golden.color();
-         golden.isDelicious();
-         golden.price();
+         // Golden golden = new Golden();
+         // golden.color();
+         // golden.isDelicious();
+         // golden.price();
+         //static and notStatic emample................
+         Department department = new Department();
+         department.display("Finance",22,"Codestrix");
         
     }
     
