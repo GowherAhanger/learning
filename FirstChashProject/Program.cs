@@ -57,12 +57,22 @@ class Program
           // cat.Eat();  // parent/animal class obj ...........
           // cat.Meow(); // child/ cat  class obj................
           //oerloading ..............
-          ExampleOverload eo = new ExampleOverload();
-          eo.add();
-          eo.add(1, 2);
-          eo.add(3, 4);
-          eo.add(1, 4, 6);
-
+          // ExampleOverload eo = new ExampleOverload();
+          // eo.add();
+          // eo.add(1, 2);
+          // eo.add(3, 4);
+          // eo.add(1, 4, 6);
+          // Method OverRideing...................
+          // Human h = new Employee();
+          // h.Print();
+          // Employee e = new Employee();
+          // e.mySalery();
+          // e.work();
+         Golden golden = new Golden();
+         golden.color();
+         golden.isDelicious();
+         golden.price();
+        
     }
     
 }
