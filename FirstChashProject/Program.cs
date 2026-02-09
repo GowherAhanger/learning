@@ -73,9 +73,139 @@ class Program
          // golden.isDelicious();
          // golden.price();
          //static and notStatic emample................
-         Department department = new Department();
-         department.display("Finance",22,"Codestrix");
+         // Department department = new Department();
+         // department.display("Finance",22,"Codestrix");
+         // Console.WriteLine("Original Constructor");
+         // Copy_Constructor cc = new Copy_Constructor("adil",33);
+         // cc.display();
+         // Console.WriteLine("Copy  Constructor");
+         // Copy_Constructor obj = new Copy_Constructor(cc);
+         // obj.display();
+        // ValueTypes valueTypes = new ValueTypes();
+        //
+        // valueTypes.age = 20;
+        // valueTypes.salary = 2000;
+        //
+        // ValueTypes valueTypes2 = valueTypes;
+        // ValueTypes valueTypes3 = valueTypes2;
+        // valueTypes.age = 25;
+        // Console.WriteLine();
+        // Console.Write("valuetype 3rd");
+        // valueTypes3.Display();
+        // Console.WriteLine();
+        // Console.Write("valude type 2nd");
+        // valueTypes2.Display();
+        // Console.WriteLine();
+        // Console.Write("valuetype ist...");
+        // valueTypes.Display();
         
+        
+            //Pass by value example method called using class because it is static.....
+        //    int value = 5;
+        // Pass_by_value__Pass_By_Ref.pass_By_value(value);
+        // Console.WriteLine("value of main class variable is " + value);
+        // //Pass by refrence example method call ...............
+        // int value12 = 5;
+        // Console.WriteLine("Printing Refrence method.......\n");
+        // Pass_by_value__Pass_By_Ref.Pass_by_Ref( ref value12);
+        // Console.Write("Printing ref value_12 \n");
+        // Console.Write(value12);
+        //Out keyword example..............
+        // int valueOfOut;
+        // Pass_By_Out po = new Pass_By_Out();
+        // Console.WriteLine("Value of out Method:=>");
+        // po.Out_Method(out valueOfOut);
+        // Console.WriteLine(" variable Out Value:\n {0}", valueOfOut);
+        // po.Out_Method( sum, sub);
+// student management system H/w objs................................
+        Console.Write("Enter number of students: ");
+        int totalStudents = int.Parse(Console.ReadLine());
+        
+        Student_Info [] students = new Student_Info[totalStudents];
+        Subject_Info [] subjects = new Subject_Info[totalStudents];
+        Registration_Info [] registrations = new Registration_Info[totalStudents];
+        Library_Info [] libraries = new Library_Info[totalStudents];
+        // entering details ....................
+        for (int i = 0; i < totalStudents; i++)
+        {
+            //student details..........
+            
+            Console.WriteLine($"\n Enter Details of student:=> {i + 1}");
+            Console.WriteLine("Enter Student ID");
+           int  Student_Id = int.Parse(Console.ReadLine());
+           Console.WriteLine("Enter Student Name:");
+            string Student_Name = Console.ReadLine();
+            Console.WriteLine("Enter Student_Age");
+            int Student_Age = int.Parse(Console.ReadLine());
+            Console.WriteLine("Student Class Name");
+            string Student_class = Console.ReadLine();
+            
+            students[i] = new Student_Info(Student_Id, Student_Name, Student_Age,Student_class);
+            
+            //subject details................
+            
+            Console.WriteLine("\n Enter Subjects.......");
+            Console.WriteLine("Enter First Subject:");
+            string First_Subject_Name = Console.ReadLine();
+            Console.WriteLine("Enter Second Subject:");
+            string Second_Subject_Name = Console.ReadLine();
+            Console.WriteLine("Enter third Subject:");
+            string Third_Subject_Name = Console.ReadLine();
+            Console.WriteLine("Enter First Subject Marks");
+            int First_Subject_Marks = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Second Subject Marks");
+            int Second_Subject_Marks = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Third Subject Marks");
+            int Third_Subject_Marks = int.Parse(Console.ReadLine());
+           //total marks ...................
+            subjects[i] = new Subject_Info(First_Subject_Name,Second_Subject_Name,Third_Subject_Name
+            ,First_Subject_Marks,Second_Subject_Marks,Third_Subject_Marks);
+            //Printing total marks.......
+            Console.WriteLine("\nTotal Marks for this student: " + subjects[i].Total_Marks);
+
+            //registaration Details.....................
+            Console.WriteLine("\n Enter Registration Details");
+            Console.WriteLine("Enter Student ID");
+            int student_Id = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Registration ID");
+            string Reg_ID = Console.ReadLine();
+            Console.WriteLine("Enter Registration Amount");
+            int Reg_Amount = int.Parse(Console.ReadLine());
+            
+            registrations[i] = new Registration_Info(Student_Id, Reg_ID, Reg_Amount);
+            //libarary Details....................
+            
+            Console.WriteLine("\n Enter Libarary Details");
+            Console.WriteLine("Enter Student ID");
+            int Student_ID = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter BookName");
+            string BookName = Console.ReadLine();
+            Console.WriteLine("Book Issued On (yyyy-MM-dd): ");
+            DateTime issuedOn = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Book Returned On (yyyy-MM-dd): ");
+            DateTime returnedOn = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Book Expires On (yyyy-MM-dd): ");
+            DateTime expiresOn = DateTime.Parse(Console.ReadLine());
+            libraries[i] = new Library_Info(student_Id,BookName,issuedOn,returnedOn,expiresOn);
+            // printing all details ........................
+            Console.WriteLine("\n Student Management System ..........");
+
+            for (int s = 0; s < totalStudents; s++)
+            {
+                if (students[s] != null)
+                {
+                    Console.WriteLine($"\nStudent {i + 1}");
+                    students[s].PrintStudentInfo();
+                    subjects[s].PrintSubjectInfo();
+                    registrations[s].PrintRegistrationInfo();
+                    libraries[s].PrintLibraryInfo();
+                    Console.WriteLine("--------------------------------------");
+                }
+            }
+
+
+
+        }
     }
     
 }
