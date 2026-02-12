@@ -1,4 +1,6 @@
-﻿namespace FirstChashProject;
+﻿using School;
+
+namespace FirstChashProject;
 using System;
 
 class Program
@@ -118,94 +120,136 @@ class Program
         // Console.WriteLine(" variable Out Value:\n {0}", valueOfOut);
         // po.Out_Method( sum, sub);
 // student management system H/w objs................................
-        Console.Write("Enter number of students: ");
-        int totalStudents = int.Parse(Console.ReadLine());
-        
-        Student_Info [] students = new Student_Info[totalStudents];
-        Subject_Info [] subjects = new Subject_Info[totalStudents];
-        Registration_Info [] registrations = new Registration_Info[totalStudents];
-        Library_Info [] libraries = new Library_Info[totalStudents];
-        // entering details ....................
-        for (int i = 0; i < totalStudents; i++)
-        {
-            //student details..........
-            
-            Console.WriteLine($"\n Enter Details of student:=> {i + 1}");
-            Console.WriteLine("Enter Student ID");
-           int  Student_Id = int.Parse(Console.ReadLine());
-           Console.WriteLine("Enter Student Name:");
-            string Student_Name = Console.ReadLine();
-            Console.WriteLine("Enter Student_Age");
-            int Student_Age = int.Parse(Console.ReadLine());
-            Console.WriteLine("Student Class Name");
-            string Student_class = Console.ReadLine();
-            
-            students[i] = new Student_Info(Student_Id, Student_Name, Student_Age,Student_class);
-            
-            //subject details................
-            
-            Console.WriteLine("\n Enter Subjects.......");
-            Console.WriteLine("Enter First Subject:");
-            string First_Subject_Name = Console.ReadLine();
-            Console.WriteLine("Enter Second Subject:");
-            string Second_Subject_Name = Console.ReadLine();
-            Console.WriteLine("Enter third Subject:");
-            string Third_Subject_Name = Console.ReadLine();
-            Console.WriteLine("Enter First Subject Marks");
-            int First_Subject_Marks = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter Second Subject Marks");
-            int Second_Subject_Marks = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter Third Subject Marks");
-            int Third_Subject_Marks = int.Parse(Console.ReadLine());
-           //total marks ...................
-            subjects[i] = new Subject_Info(First_Subject_Name,Second_Subject_Name,Third_Subject_Name
-            ,First_Subject_Marks,Second_Subject_Marks,Third_Subject_Marks);
-            //Printing total marks.......
-            Console.WriteLine("\nTotal Marks for this student: " + subjects[i].Total_Marks);
-
-            //registaration Details.....................
-            Console.WriteLine("\n Enter Registration Details");
-            Console.WriteLine("Enter Student ID");
-            int student_Id = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter Registration ID");
-            string Reg_ID = Console.ReadLine();
-            Console.WriteLine("Enter Registration Amount");
-            int Reg_Amount = int.Parse(Console.ReadLine());
-            
-            registrations[i] = new Registration_Info(Student_Id, Reg_ID, Reg_Amount);
-            //libarary Details....................
-            
-            Console.WriteLine("\n Enter Libarary Details");
-            Console.WriteLine("Enter Student ID");
-            int Student_ID = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter BookName");
-            string BookName = Console.ReadLine();
-            Console.WriteLine("Book Issued On (yyyy-MM-dd): ");
-            DateTime issuedOn = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("Book Returned On (yyyy-MM-dd): ");
-            DateTime returnedOn = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("Book Expires On (yyyy-MM-dd): ");
-            DateTime expiresOn = DateTime.Parse(Console.ReadLine());
-            libraries[i] = new Library_Info(student_Id,BookName,issuedOn,returnedOn,expiresOn);
-            // printing all details ........................
-            Console.WriteLine("\n Student Management System ..........");
-
-            for (int s = 0; s < totalStudents; s++)
-            {
-                if (students[s] != null)
-                {
-                    Console.WriteLine($"\nStudent {i + 1}");
-                    students[s].PrintStudentInfo();
-                    subjects[s].PrintSubjectInfo();
-                    registrations[s].PrintRegistrationInfo();
-                    libraries[s].PrintLibraryInfo();
-                    Console.WriteLine("--------------------------------------");
-                }
-            }
-
-
-
-        }
+    //     Console.Write("Enter number of students: ");
+    //     int totalStudents = int.Parse(Console.ReadLine());
+    //     
+    //     Student_Info [] students = new Student_Info[totalStudents];
+    //     Subject_Info [] subjects = new Subject_Info[totalStudents];
+    //     Registration_Info [] registrations = new Registration_Info[totalStudents];
+    //     Library_Info [] libraries = new Library_Info[totalStudents];
+    //     // entering details ....................
+    //     for (int i = 0; i < totalStudents; i++)
+    //     {
+    //         //student details..........
+    //         
+    //         Console.WriteLine($"\n Enter Details of student:=> {i + 1}");
+    //         Console.WriteLine("Enter Student ID");
+    //        int  Student_Id = int.Parse(Console.ReadLine());
+    //        Console.WriteLine("Enter Student Name:");
+    //         string Student_Name = Console.ReadLine();
+    //         Console.WriteLine("Enter Student_Age");
+    //         int Student_Age = int.Parse(Console.ReadLine());
+    //         Console.WriteLine("Student Class Name");
+    //         string Student_class = Console.ReadLine();
+    //         
+    //         students[i] = new Student_Info(Student_Id, Student_Name, Student_Age,Student_class);
+    //         
+    //         //subject details................
+    //         
+    //         Console.WriteLine("\n Enter Subjects.......");
+    //         Console.WriteLine("Enter First Subject:");
+    //         string First_Subject_Name = Console.ReadLine();
+    //         Console.WriteLine("Enter Second Subject:");
+    //         string Second_Subject_Name = Console.ReadLine();
+    //         Console.WriteLine("Enter third Subject:");
+    //         string Third_Subject_Name = Console.ReadLine();
+    //         Console.WriteLine("Enter First Subject Marks");
+    //         int First_Subject_Marks = int.Parse(Console.ReadLine());
+    //         Console.WriteLine("Enter Second Subject Marks");
+    //         int Second_Subject_Marks = int.Parse(Console.ReadLine());
+    //         Console.WriteLine("Enter Third Subject Marks");
+    //         int Third_Subject_Marks = int.Parse(Console.ReadLine());
+    //        //total marks ...................
+    //         subjects[i] = new Subject_Info(First_Subject_Name,Second_Subject_Name,Third_Subject_Name
+    //         ,First_Subject_Marks,Second_Subject_Marks,Third_Subject_Marks);
+    //         //Printing total marks.......
+    //         Console.WriteLine("\nTotal Marks for this student: " + subjects[i].Total_Marks);
+    //
+    //         //registaration Details.....................
+    //         Console.WriteLine("\n Enter Registration Details");
+    //         Console.WriteLine("Enter Student ID");
+    //         int student_Id = int.Parse(Console.ReadLine());
+    //         Console.WriteLine("Enter Registration ID");
+    //         string Reg_ID = Console.ReadLine();
+    //         Console.WriteLine("Enter Registration Amount");
+    //         int Reg_Amount = int.Parse(Console.ReadLine());
+    //         
+    //         registrations[i] = new Registration_Info(Student_Id, Reg_ID, Reg_Amount);
+    //         //libarary Details....................
+    //         
+    //         Console.WriteLine("\n Enter Libarary Details");
+    //         Console.WriteLine("Enter Student ID");
+    //         int Student_ID = int.Parse(Console.ReadLine());
+    //         Console.WriteLine("Enter BookName");
+    //         string BookName = Console.ReadLine();
+    //         Console.WriteLine("Book Issued On (yyyy-MM-dd): ");
+    //         DateTime issuedOn = DateTime.Parse(Console.ReadLine());
+    //         Console.WriteLine("Book Returned On (yyyy-MM-dd): ");
+    //         DateTime returnedOn = DateTime.Parse(Console.ReadLine());
+    //         Console.WriteLine("Book Expires On (yyyy-MM-dd): ");
+    //         DateTime expiresOn = DateTime.Parse(Console.ReadLine());
+    //         libraries[i] = new Library_Info(student_Id,BookName,issuedOn,returnedOn,expiresOn);
+    //         // printing all details ........................
+    //         Console.WriteLine("\n Student Management System ..........");
+    //
+    //         for (int s = 0; s < totalStudents; s++)
+    //         {
+    //             if (students[s] != null)
+    //             {
+    //                 Console.WriteLine($"\nStudent {i + 1}");
+    //                 students[s].PrintStudentInfo();
+    //                 subjects[s].PrintSubjectInfo();
+    //                 registrations[s].PrintRegistrationInfo();
+    //                 libraries[s].PrintLibraryInfo();
+    //                 Console.WriteLine("--------------------------------------");
+    //             }
+    //         }
+    //         
+    //     }
+            // Oprator_OverLoading opl1 = new Oprator_OverLoading();
+            // opl1.Str = "Gowher";
+            // opl1.Num = 1995;
+            // Oprator_OverLoading opl2 = new Oprator_OverLoading();
+            // opl2.Str = "Ahanger";
+            // opl2.Num = 1995;
+            // Oprator_OverLoading opl3 = new Oprator_OverLoading();
+            // opl3 = opl1 + opl2;
+            // Console.WriteLine(opl3.Str);
+            // Console.WriteLine(opl3.Num);
+           //  Sdudents_Data sd = new Sdudents_Data();
+           // Console.WriteLine(sd.getAge()); 
+           // Console.WriteLine(sd.setAge(23));
+          // Teacher.print();
+          // Admenistration.AdmissonSection.print();
+          // Can_Inherit_Be_Called2 c2 = new Can_Inherit_Be_Called2();
+          //   c2.Print();
+         // Def def = new Def();
+         // def.m1(20);
+         // tbc tb = new tbc();
+         // tb.m1();
+         
+         //Hyprid Inheritance.................
+         // Library studentLibrary = new Library(
+         //  101, "gowher", 20, "12th Grade",
+         //  501, "Mathematics", "Physics",
+         //  "Physics", DateTime.Now.AddDays(-5),
+         //  DateTime.Now.AddDays(5), DateTime.Now.AddDays(10)
+         // );
+         // Console.WriteLine("Student Information:");
+         // studentLibrary.Display_Student();
+         //
+         // Console.WriteLine("\nSubject Information:");
+         // studentLibrary.Display_Subject_Information();
+         //
+         // Console.WriteLine("\nLibrary Information:");
+         // studentLibrary.Display_Library_Info();
+         
+         //Multipule Inhritance using interfaces
+         SmartPhone SP = new SmartPhone();
+         SP.Call();
+         SP.playMusic();
+         SP.takePicture();
+     
     }
     
 }
