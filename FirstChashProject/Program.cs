@@ -245,11 +245,35 @@ class Program
          // studentLibrary.Display_Library_Info();
          
          //Multipule Inhritance using interfaces
-         SmartPhone SP = new SmartPhone();
-         SP.Call();
-         SP.playMusic();
-         SP.takePicture();
-     
+         // SmartPhone SP = new SmartPhone();
+         // SP.Call();
+         // SP.playMusic();
+         // SP.takePicture();
+         
+         // CommandLine
+         // double number1= double.Parse(args[0]); 
+         // string oprator = args[1];
+         // double number2 = double.Parse(args[2]);
+         // if (oprator == "+")
+         // {
+         //  Console.WriteLine(number1 + number2);
+         // }
+         // else if (oprator == "-")
+         // {
+         //  Console.WriteLine(number1 - number2);
+         // }
+         // else if (oprator == "*")
+         // {
+         //  Console.WriteLine(number1 * number2);
+         // }
+         // else
+         // {
+         //  Console.WriteLine(number2 / number1);
+         // }
+         //Displaying ..............
+         Jagged_Array_Example jaggedArray = new Jagged_Array_Example();
+         jaggedArray.Display_jaggedArray();
+         jaggedArray.Display_jaggedArray2();
     }
     
 }
