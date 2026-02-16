@@ -271,9 +271,13 @@ class Program
          //  Console.WriteLine(number2 / number1);
          // }
          //Displaying ..............
-         Jagged_Array_Example jaggedArray = new Jagged_Array_Example();
-         jaggedArray.Display_jaggedArray();
-         jaggedArray.Display_jaggedArray2();
+         // Jagged_Array_Example jaggedArray = new Jagged_Array_Example();
+         // jaggedArray.Display_jaggedArray();
+         // jaggedArray.Display_jaggedArray2();
+         // Array_List_Example ALE = new Array_List_Example();
+         // ALE.arrayList(); 
+         //Printing HashTable ...............................
+         HashTable_Example ht = new HashTable_Example();
     }
     
 }
