@@ -1,5 +1,5 @@
 ﻿using School;
-
+using System.Collections.Generic;
 namespace FirstChashProject;
 using System;
 
@@ -277,7 +277,17 @@ class Program
          // Array_List_Example ALE = new Array_List_Example();
          // ALE.arrayList(); 
          //Printing HashTable ...............................
-         HashTable_Example ht = new HashTable_Example();
+         //HashTable_Example ht = new HashTable_Example();
+         //Stack Example Program..................................
+         // StackExample  stack = new StackExample();
+         // stack.StackOperations();
+         // stack.Push(22);
+         // stack.Peek();
+         // stack.Pop();
+         //Sortted_List program ......................
+         Sorted_LIst_Example st = new Sorted_LIst_Example();
+         st.sortedList_Opreations();
+         
     }
     
 }
